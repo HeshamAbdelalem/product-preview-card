@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Kurale&family=Montserrat:wght@500;700&family=Quicksand&display=swap');
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --main-font: 'Fraunces', serif;
+  --sub-font: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: var(--sub-font);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  min-width: 350px;
+  background-color: var(--white);
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.product-pic img {
+  width: 100%;
+  /* border-top-right-radius: 1rem; */
+  /* border-top-left-radius: 1rem; */
+}
+
+.product-info {
+  padding: 0.75rem 1.25rem;
+}
+.product-description {
+  font-family: var(--sub-font);
+  opacity: 0.5;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.8;
+}
+
+.product-info p:first-child {
+  color: var(--grayish);
+  letter-spacing: 0.3rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.product-info h1 {
+  font-family: var(--main-font);
+  text-transform: capitalize;
+  font-size: 1.9rem;
+}
+
+.product-info .price {
+  color: var(--dark-cyan);
+  font-weight: bold;
+  font-family: var(--main-font);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-info span {
+  font-size: 0.9rem;
+  vertical-align: middle;
+  margin-left: 1rem;
+  text-decoration: line-through;
+  color: var(--grayish);
+  font-weight: 100;
+  font-family: var(--sub-font);
+  opacity: 0.7;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+button {
+  /* width: 80%; */
+  background-color: var(--dark-cyan);
+  padding: 0rem 6rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+button p {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  font-family: var(--sub-font);
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    flex-direction: row;
+    max-width: 850px;
+    /* max-height: 75vh; */
+  }
+
+  .product-pic {
+    width: 50%;
+    min-height: 100%;
+  }
+
+  picture {
+    min-height: 600px;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  img {
+    border-radius: 0;
+  }
+
+  .product-info {
+    width: 50%;
+    min-height: 100%;
+  }
+
+  .product-info {
+    margin: 1rem;
+  }
+  .product-info p {
+    margin: 1rem 0;
+  }
+
+  /* .product-info {
+    width: 50%;
+  } */
+}
